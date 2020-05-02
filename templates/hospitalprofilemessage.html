@@ -1,0 +1,12 @@
+{% extends 'hospitaltemplate.html' %}
+
+{% block h1 %}
+<div align="center">
+<h2 style="color:purple; font-weight:700px;">Change Message</h2>
+{% if msg %}
+<h3 style="color:red;">{{msg}}</h3>
+<h5 ><a href="hospital_home">Go Back to home</a></h5>
+
+{% endif %}
+    </div>
+{% endblock %}

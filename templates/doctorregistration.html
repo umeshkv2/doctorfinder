@@ -1,0 +1,21 @@
+{% extends 'hospitaltemplate.html' %}
+
+{% block h1 %}
+<h1 align="center" style="color:blue; margin-top:30px; font-weight:bold;">Doctor Registration Form</h1>
+<form method="post" action="doctor_registration">
+    <div align="center" >
+    <p style="margin-top:20px;">Name<input style="margin-left:100" type="text" name="v1"></p>
+    <p>Speciality<input style="margin-left:80" type="text" name="v2"></p>
+    <p>Timing<input style="margin-left:95" type="text" name="v3"></p>
+    <p>Experience<input style="margin-left:70" type="text" name="v4"></p>
+    <p><input onMouseOver="this.style.background='lime'"
+onMouseOut="this.style.background='pink'" style="background:pink;cursor:pointer;" type="submit" value="submit"></p>
+        </div>
+</form>
+{% if drmsg %}
+<h3>{{drmsg}}</h3>
+{% endif %}
+{% endblock %}
+
+</body>
+</html>

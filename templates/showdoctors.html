@@ -1,0 +1,13 @@
+{% extends 'hospitaltemplate.html' %}
+{% block h1 %}
+{% if a %}
+<h4>Doctor name: {{ a[0] }} <br/>
+    speciality: {{ a[1] }} <br/>
+    timing: {{ a[2] }} <br/>
+    Experience: {{ a[3] }} <br/>
+    Email of Hospital: {{ a[4] }}
+</h4>
+{% elif mess %}
+<h3>{{mess}}</h3>
+{% endif %}
+{% endblock %}

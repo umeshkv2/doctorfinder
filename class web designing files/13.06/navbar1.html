@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Navbar</title>
+<link rel="stylesheet" type="text/css" href="bootstrap-4.0.0-dist/css/bootstrap.css">
+<script type="text/javascript" src="bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+$(document).ready(function(e) {
+    $("#b1").click(function(e) {
+        $("#collnav").slideToggle(1000);
+    });
+});
+</script>
+
+<style>
+.nav-link:hover
+{
+	background:#06F;}
+</style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+	<a href="#" class="navbar-brand text-warning font-weight-bold">Hospital</a>
+    
+    
+  <div class="collapse navbar-collapse" id="collnav">
+    	<ul class="navbar-nav ml-auto text-center">
+        	<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Service</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+        </ul>
+    </div>
+    <input type="text" placeholder="search" class="ml-auto">
+    <button class="navbar-toggler" id="b1">
+    	<span class="navbar-toggler-icon">
+        
+        </span>
+    
+    </button>
+
+
+</nav>
+</body>
+</html>

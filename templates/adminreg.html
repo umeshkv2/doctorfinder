@@ -1,0 +1,23 @@
+{% extends 'admintemplate.html' %}
+
+{% block a1 %}
+
+<form name="form2" method="post" action="admin_reg">
+    <div  align="center" style="height:400px; margin-top:50px">
+<p style="font-size:18px">admin name<input type="text" name="v1" style="margin-left:60px"></p>
+<p style="font-size:18px">address<input type="text" name="v2" style="margin-left:95px"></p>
+<p style="font-size:18px;">contact<input type="text" name="v3" style="margin-left:105px"></p>
+<p style="font-size:18px">Email<input type="text" name="v4" style="margin-left:120px"></p>
+<p style="font-size:18px; ">password<input type="password" name="v5" id="t3" style="margin-left:90px"></p>
+<p style="font-size:18px;">confirm password<input type="password" name="v6" id="t4" style="margin-left:30px"></p>
+<p><input type="submit"  value="register" onMouseOver="this.style.background='orange'"
+onMouseOut="this.style.background='lime'" style="margin-left:100px; background:lime; cursor:pointer;" ></p>
+        
+</form>
+
+{% if mess %}
+<h4>{{mess}}</h4>
+{% endif %}
+</div>
+{% endblock %}
+

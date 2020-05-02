@@ -1,0 +1,18 @@
+{% extends 'admintemplate.html' %}
+{% block a1 %}
+<div align="center">
+<h2 style="color:blue; font-weight:700px; text-shadow:2px 2px blue;">Admin details</h2>
+{% if data %}
+{% for a in data %}
+<h4>Admin name: {{ a[0] }} <br/>
+    Address: {{ a[1] }} <br/>
+    contact: {{ a[2] }} <br/>
+    Email: {{ a[3] }} <br/>
+    <hr/>
+</h4>
+{% endfor %}
+{% elif mess %}
+<h4 style="color:red">{{mess}}</h4>
+{% endif %}
+</div>
+{% endblock %}

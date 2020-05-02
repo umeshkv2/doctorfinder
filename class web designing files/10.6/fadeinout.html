@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Fadeinout</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+$(document).ready(function(e) {
+    $("#img1").hide();
+	
+	$("#b1").click(function(e) {
+        $("#img1").fadeIn(3000);
+    });
+	
+	$("#b2").click(function(e) {
+        $("#img1").fadeOut(3000);
+    });
+	
+	$("#b3").click(function(e) {
+        $("#img1").fadeToggle(3000);
+    });
+	
+	$("#b4").click(function(e) {
+        $("#img1").fadeTo(3000,0.5);
+    });
+});
+
+</script>
+</head>
+
+<body>
+<img src="2020-lamborghini-huracan-evo-review_11.jpg" height="300" width="400" id="img1">
+<button id="b1">FadeIn</button>
+<button id="b2">FadeOut</button>
+<button id="b3">FadeToggle</button>
+<button id="b4">FadeTo</button>
+</body>
+</html>

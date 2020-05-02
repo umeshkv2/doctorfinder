@@ -1,0 +1,42 @@
+
+<html>
+<head>
+<title>genenral page</title>
+<link rel="stylesheet" type="text/css" href="../static/bootstrap-4.0.0-dist/css/bootstrap.css">
+<script type="text/javascript" src="../static/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+<style>
+.title
+{
+	height:250px;
+	background-image:url(../static/images/hopitalhead.jpg);
+	background-repeat:no-repeat;
+	background-size:100% 250px;
+	
+}
+.col-12
+{
+	height:430px;
+	background:rgba(204,255,0,0.6);
+}
+.foot
+{
+	height:60px;
+	text-shadow:2px 2px 2px white;
+	font-weight:600;
+	font-size:36px;
+	color:white;
+	background:rgba(0,153,102,1)
+	
+}
+</style>
+</head>
+
+<body>
+<div class="container-fluid title"></div>
+<div class="container-fluid body">
+<div class="row">
+    <div class="col-12 container-fluid">{% block g1 %}{% endblock %}</div>
+</div></div>
+<div class="contianer-fluid foot text-center">all rights &reg; by umesh</div>
+</body>
+</html>

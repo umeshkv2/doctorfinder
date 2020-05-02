@@ -1,0 +1,18 @@
+{% extends 'medicinehome.html' %}
+{% block m1 %}
+
+<form method="post" action="medicine_reg">
+<p>Medicine Name      
+  <input type="text id="v1" name="v1"></p>
+<p>Quantity  
+  <input type="text" id="v2" name="v2"></p>
+<p>price  
+  <input type="text" id="v3" name="v3"></p>
+<p>Use     
+  <input type="text" id="v4" name="v4" ></p>
+<p><input type="submit" value="sumit">
+{% if mrmsg %}
+<h2 align="center" style="color:red">{{mrmsg}}</h2>
+{% endif %}
+</form>
+{% endblock %}

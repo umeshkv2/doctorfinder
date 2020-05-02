@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>jquery1</title>
+<script src="jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(e) {
+    $("#b1").click(function(e) {
+        $("#a1").hide(1000);
+    });
+	
+	$("#b2").click(function(e) {
+        $("#a1").show(1000);
+    });
+	
+	$("#b3").click(function(e) {
+        $("#a1").toggle(1000);
+    });
+});
+
+</script>
+
+</head>
+
+<body>
+<h1 id="a1">This is javascript library file</h1>
+<button id="b1">Hide</button>
+<button id="b2">Show</button>
+<button id="b3">Toggle</button>
+
+</body>
+</html>

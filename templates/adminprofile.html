@@ -1,0 +1,17 @@
+{% extends 'admintemplate.html' %}
+{% block a1 %}
+<h1 align="center" style="color:purple;margin-top:50px;">Admin profile</h1>
+{% if pdata %}
+<form method="post" action="admin_profile">
+<div align="center" style="margin-top:20px;" >
+    <p>Name<input  style="margin-left:60px;" type="text" name="v1" value="{{pdata[0]}}"></p>
+    <p>address<input style="margin-left:50px;" type="text" name="v2" value="{{pdata[1]}}"></p>
+    <p>contact<input style="margin-left:50px;" type="number" name="v3" value="{{pdata[2]}}"></p>
+    <p>Email<input style="margin-left:65px;" readonly type="email" name="v4" value="{{pdata[3]}}"></p>
+    <p><input style="cursor:pointer; background:orange;" onMouseover="this.style.background='lime'" onMouseOut="this.style.background='orange'" type="submit" value="Save Changes"></p>
+    </div>
+</form>
+{% elif pmsg %}
+<h3 style="color:red;">{{pmsg}}</h3>
+{% endif %}
+{% endblock %}

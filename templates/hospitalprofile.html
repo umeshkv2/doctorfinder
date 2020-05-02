@@ -1,0 +1,22 @@
+{% extends 'hospitaltemplate.html' %}
+{% block h1 %}
+<div align="center">
+<h1 style="color:blue ;line-height:80px; font-weight:bold;">Hospital profile</h1>
+{% if pdata %}
+<form method="post" action="hospital_profile">
+    <p>Hospital Name<input style="margin-left:20" type="text" name="v1" value="{{pdata[0]}}"></p>
+    <p>Speciality<input style="margin-left:50" type="text" name="v2" value="{{pdata[1]}}"></p>
+    <p>Address<input style="margin-left:55" type="text" name="v3" value="{{pdata[2]}}"></p>
+    <p>Contact<input style="margin-left:60" type="number" name="v4" value="{{pdata[3]}}"></p>
+    <p>Ac beds<input style="margin-left:60" type="number" name="v5" value="{{pdata[4]}}"></p>
+    <p>Non-Ac beds<input style="margin-left:25" type="number" name="v6" value="{{pdata[5]}}"></p>
+    <p>Email<input style="margin-left:80" readonly type="email" name="v7" value="{{pdata[6]}}"></p>
+    <p><input onMouseOver="this.style.background='lime'"
+onMouseOut="this.style.background='pink'" style="background:pink;cursor:pointer;" type="submit" value="Save Changes"></p>
+</form>
+<h5><a href="hospital_home">Back to Home</a></h5>
+{% elif pmsg %}
+<h3 style="color:red;">{{pmsg}}</h3>
+{% endif %}
+</div>
+{% endblock %}

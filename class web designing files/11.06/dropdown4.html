@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Dropdown</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+$(document).ready(function(e) {
+    $("#p1").hide();
+	$("#p2").hide();
+	$("#p3").hide();
+
+	$("#a1").click(function(e) {
+        if(1)
+		{
+			$("#p1").slideToggle();
+			$("#p2").slideUp();
+			$("#p3").slideUp();
+		}
+    });
+	$("#a2").click(function(e) {
+        if(1)
+		{
+			$("#p2").slideToggle();
+			$("#p1").slideUp();
+			$("#p3").slideUp();
+		}
+    });
+	$("#a3").click(function(e) {
+        if(1)
+		{
+			$("#p3").slideToggle();
+			$("#p1").slideUp();
+			$("#p2").slideUp();
+		}
+    });
+});
+</script>
+<style>
+*
+{
+	margin:0;}
+#a1,#a2,#a3
+{
+	border:1px solid #000;
+	width:200px;
+	text-align:center;
+	background:#09F;
+	color:#FFF;}
+
+#p1,#p2,#p3
+{
+	border:1px solid #000;
+	width:200px;
+	text-align:center;
+	background:#9C0;
+	color:#FFF;
+	height:30px;}
+
+</style>
+</head>
+
+<body>
+<h1 id="a1">PHP</h1>
+<p id="p1">This is programming lanugage</p>
+<h1 id="a2">Python</h1>
+<p id="p2">This is programming lanugage</p>
+<h1 id="a3">Angularjs</h1>
+<p id="p3">This is programming lanugage</p>
+
+
+</body>
+</html>

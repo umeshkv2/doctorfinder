@@ -1,0 +1,18 @@
+{% extends 'hospitaltemplate.html' %}
+{% block h1 %}
+{% if mdata %}
+{% for a in mdata %}
+<div align="center">
+<h2 style="color:green; font-weight:700px;line-height:100px; text-shadow:4px 2px greeen;">Medical Stores details</h2>
+<h4 align="center" style="color:purple;">Medicial Store Name : {{ a[0] }} <br/>
+     Address :   {{ a[1] }} <br/>
+    Contact Number :      {{ a[2] }} <br/>
+    Email :        {{ a[3] }}
+    <hr/>
+</h4>
+{% endfor %}
+{% elif mess %}
+<h3 align="center" style="color:red; ">{{mess}}</h3>
+{% endif %}
+</div>
+{% endblock %}

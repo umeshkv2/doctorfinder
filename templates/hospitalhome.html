@@ -1,0 +1,24 @@
+{% extends 'hospitaltemplate.html' %}
+{% block h1%}
+		<h1 align="center" style="color:purple;font-weight:bold; font-size:50px;">Hospital Home</h1>
+<div align="center">
+	<h4 style="color:#639;font-weight:700;">Hospital name:{{name}}<br />hospital email:{{eml}}</h4>
+	{% if photo=='not' %}
+	<h4 style="color:red"><a href="upload_hospital_photo">upload photo</a></h4>
+	{% else %}
+	<img src="../static/uploadphoto/{{photo}}" width="100" height="100" ><br/>
+	<h5 style="color:red"><a href="change_hospital_photo">change Photo</a></h5>
+	{% endif %}
+    </div>
+		<ul>
+		<li><a id="e" href="hospital_profile">Hospital profile</a></li>
+		<li><a id="e" href="show_doctors">Show Docotor details</a></li>
+		<li><a id="e" href="doctor_registration">New Doctor Registration</a></li>
+		<li><a id="e" href="show_hospital">Show hospital details</a></li>
+		<li><a id="e" href="medicalstore_reg">Medical store registration</a></li>
+			<li><a id="e" href="medicalstore_view">View Medical stores</a></li>
+		<li><a id="e" href="change_password_hospital">Change Password</a></li>
+		<li><a id="e" href="logout">Logout</a></li>
+		</ul>
+{% endblock %}
+

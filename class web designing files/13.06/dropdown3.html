@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Dropdown</title>
+<script type="text/javascript" src="bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap-4.0.0-dist/css/bootstrap.css">
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+$(document).ready(function(e) {
+    $("#b1").click(function(e) {
+        $("#menu").toggle();
+    });
+});
+</script>
+
+</head>
+
+<body>
+<div class="dropdown">
+	<button class="dropdown-toggle btn btn-primary" id="b1">Menu</button>
+    <div class="dropdown-menu" id="menu">
+    	<a href="#" class="dropdown-item bg-info">Home</a>
+        <a href="#" class="dropdown-item bg-info">About</a>
+        <a href="#" class="dropdown-item bg-info">Contact</a>
+        <a href="#" class="dropdown-item bg-info">Service</a>
+        <a href="#" class="dropdown-item bg-info">Login</a>
+    </div>
+
+</div>
+</body>
+</html>

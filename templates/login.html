@@ -1,0 +1,22 @@
+
+{% extends 'generaltemplate.html' %}
+<html>
+<head>
+	<title>Login Page</title>
+</head>
+<body >{% block g1 %}
+<div align="center">
+	<h1 style="color:red;font-weight:900; line-height:150px;">Login</h1>
+	<form method="post" action="login" >
+		<p style="color:purple;font-weight:600">Email<input style="margin-left:50; border-radius:10px" type="Email"  placeholder="enter your email" name="v1"></p>
+		<p style="color:purple;font-weight:600">Password<input style="margin-left:22;border-radius:10px" type="Password" placeholder="enter your pasword" name="v2"></p>
+		<p ><input style="background:lime;color:red;width:100px;cursor:pointer;border-radius:7px" onMouseOver="this.style.background='orange'" onMouseOut="this.style.background='lime'" type="submit" value="Login" name="b1"></p>
+	</form>
+
+	{% if lmsg %}
+	<h3 style="color:red">{{lmsg}}</h3>
+	{% endif %}
+	</div>
+	{% endblock %}
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'medicinehome.html' %}
+{% block m1 %}
+	<h1 align="center" style="color:#F60;font-weight:bold; text-shadow:2px 2px orange;"><i>Admin Home</i></h1>
+    <div align="center">
+
+	<h4 style="color:#639; font-weight:700;">Store name:{{name}}<br />Store email:{{eml}}</h4>
+    </div>
+    <div>
+	<ul style="list-style:circle; list-style-position:inside; margin-left:400px;margin-top:100px;" >
+		<li><a id="e" href="medicine_reg">Register Medicines</a></li>
+		<li><a id="e" href="view_medicines">view Medicine Details</a></li>
+		<li><a id="e" href="logout">Logout</a></li>
+	</ul>
+    </div>
+	{% endblock %}

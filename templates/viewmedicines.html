@@ -1,0 +1,18 @@
+{% extends 'medicinehome.html' %}
+{% block m1 %}
+{% if mdata %}
+{% for a in mdata %}
+<div align="center">
+<h2 style="color:green; font-weight:700px;line-height:100px; text-shadow:4px 2px greeen;">Medicine details</h2>
+<h4 align="center" style="color:purple;">Medicine name: {{ a[0] }} <br/>
+    Quantity:   {{ a[1] }} <br/>
+    Price:      {{ a[2] }} <br/>
+    Use:        {{ a[3] }}
+    <hr/>
+</h4>
+{% endfor %}
+{% elif mess %}
+<h3 align="center" style="color:red; ">{{mess}}</h3>
+{% endif %}
+</div>
+{% endblock %}

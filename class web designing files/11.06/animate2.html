@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Animate</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+$(document).ready(function(e) {
+    $("#img1").hide();
+	$(document).click(function(e) {
+        $("#img1").slideDown(1000).animate({left:"1000px"},5000).queue(function(e){
+			$(this).attr("src","david-marcu-114194-unsplash.jpg").dequeue();
+			});
+		$("#img1").animate({top:"400px"},5000).queue(function(e){
+			$(this).attr("src","2020-lamborghini-huracan-evo-review_11.jpg").dequeue();
+			});
+		$("#img1").animate({left:"0"},5000);
+		$("#img1").animate({top:"0"},5000);
+    });
+});
+
+</script>
+<style>
+#img1
+{
+	position:absolute;}
+</style>
+</head>
+
+<body>
+<img src="ian-dooley-407846-unsplash.jpg" id="img1">
+</body>
+</html>

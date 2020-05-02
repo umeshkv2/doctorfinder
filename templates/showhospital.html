@@ -1,0 +1,28 @@
+{% extends 'admintemplate.html' %}
+{% block a1 %}
+<h2 align="center" style="color:purple; font-weight:700px; text-shadow:2px 2px 2px purple; ">Hospital Detail page</h2>
+<hr/>
+<div align="center">
+{% if adata %}
+{% for a in adata %}
+<h4>Hospitalname: {{ a[0] }} <br/>
+    speciality: {{ a[1] }} <br/>
+    address: {{ a[2] }} <br/>
+    contact: {{ a[3] }} <br/>
+    ac beds: {{ a[4] }} <br/>
+    non ac beds : {{ a[5] }} <br/>
+    email : {{ a[6] }}
+
+</h4>
+<form method="post" action="edit_form">
+    <input type="hidden" name="h1" value="{{ a[6] }}">
+    <input style="background:lime; cursor:pointer;" type="submit" value="Edit" onMouseOver="this.style.background='orange'"
+onMouseOut="this.style.background='lime'">
+</form>
+<hr/>
+{% endfor %}
+{% elif amess %}
+<h4>{{amess}}</h4>
+{% endif %}
+</div>
+{% endblock %}

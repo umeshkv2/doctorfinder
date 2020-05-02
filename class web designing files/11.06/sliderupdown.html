@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>slideupdown</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+$(document).ready(function(e) {
+    $("#img1").hide();
+	$("#b1").click(function(e) {
+        $("#img1").slideDown(1000);
+    });
+	
+	$("#b2").click(function(e) {
+        $("#img1").slideUp(1000);
+    });
+	$("#b3").click(function(e) {
+        $("#img1").slideToggle(1000);
+    });
+});
+
+</script>
+</head>
+
+<body>
+<img src="2020-lamborghini-huracan-evo-review_11.jpg" height="300" width="400" id="img1">
+<button id="b1">SlideDown</button>
+<button id="b2">SlideUp</button>
+<button id="b3">SlideToggle</button>
+
+</body>
+</html>

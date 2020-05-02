@@ -1,0 +1,123 @@
+
+<html>
+<head>
+<title>Hospital</title>
+<link rel="stylesheet" type="text/css" href="../static/bootstrap-4.0.0-dist/css/bootstrap.css">
+<script type="text/javascript" src="../static/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+<script>
+	function A(f)
+	{
+		if(check_pass(f.t3,f.t4,"confirm password doesn't match with new password")==false)
+		{
+			f.t3.focus();
+			return false;
+		}
+		
+	}
+	function check_pass(e1,e2,msg)
+	{
+		if(e1.value!=e2.value)
+		{
+			alert(msg);
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+	function clock()
+	{
+		var d=new Date();
+		var t=d.toLocaleTimeString();
+		document.getElementById('clck').innerHTML=t; 
+	}
+	setInterval(clock,1000);
+    </script>
+<style>
+.head
+{
+	height:100px;
+	width:100%;
+	font-size:60px;
+	text-align:center;
+	color:white;
+	text-shadow:3px 2px 4px #333;
+	border:1px solid black;
+	font-weight:400;
+	background:rgba(255,0,0,0.5);
+		
+	
+}
+.btn:hover
+{
+	background:purple;
+}
+.a1
+{
+	height:470px;
+	background:#CFE;
+}
+.a2
+{
+	height:470px;
+	background:rgba(153,51,153,0.3);
+}
+.copyr
+{
+	font-size:33px;
+}
+.L
+{
+	font-size:40px;
+	text-align:center;
+	color:#039;
+}
+#bt
+{
+	color:white;
+	text-decoration:none;
+}
+#e
+{
+	color:#303;
+	font-size:24px;
+	font-weight:900;
+	font-family:"Arial Black", Gadget, sans-serif;
+	text-decoration:none;
+}
+#e:hover
+{
+	color:pink;
+	text-decoration:underline;
+}
+
+</style>
+</head>
+
+<body>
+<div class="container-fluid head">HOSPITAL</div>
+<div class="container-fluid menu bg-dark">
+<div class="row">
+<button class="btn btn-danger" ><a id="bt" href="hospital_home">Home</a></button>
+<button class="btn btn-danger" ><a id="bt" href="doctor_registration">New Doctor</a></button>
+<button class="btn btn-danger" ><a id="bt" href="hospital_profile">Profile</a></button>
+<button class="btn btn-danger" ><a id="bt" href="change_password_hospital">Change password</a></button>
+<button class="btn btn-danger" ><a id="bt" href="logout">Logout</a></button>
+<h4 id="clck" style="margin-left:720px; color:white; ">TIME</h4>
+</div></div>
+{% block h1 %}
+<div class="container-fluid">
+<div class="row">
+<div class="col-3 a1">
+<div class="L container-fluid" style="font-weight:100;">Links</div>
+</div>
+<div class="col-9 a2">
+
+</div>
+</div></div>
+{% endblock %}
+
+<div class="copyr container-fluid bg-dark text-center text-white">copyright &copy; to Umesh</div>
+</body>
+</html>

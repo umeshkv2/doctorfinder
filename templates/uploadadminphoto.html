@@ -1,0 +1,8 @@
+{% extends 'admintemplate.html'%}
+{% block a1 %}
+<h1 align="center" style="line-height:200px; color:blue;font-weight:700px;text-shadow:2px 2px blue;">Admin photo upload</h1>
+<form method="post" action="upload_adminphoto_mess" enctype="multipart/form-data">
+    <div align="center">upload your photo<input type="file" name="p1">
+        <input type="submit" value="upload"></div>
+</form>
+{% endblock %}

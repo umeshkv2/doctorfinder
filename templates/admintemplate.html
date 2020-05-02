@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<title>admin</title>
+<link rel="stylesheet" type="text/css" href="../static/bootstrap-4.0.0-dist/css/bootstrap.css">
+<script src="../static/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+  <script>
+	function A(f)
+	{
+		if(check_pass(f.t3,f.t4,"confirm password doesn't match with new password")==false)
+		{
+			f.t3.focus();
+			return false;
+		}
+		
+	}
+	function check_pass(e1,e2,msg)
+	{
+		if(e1.value!=e2.value)
+		{
+			alert(msg);
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+	function clock()
+	{
+		var d=new Date();
+		var t=d.toLocaleTimeString();
+		document.getElementById('clck').innerHTML=t; 
+	}
+	setInterval(clock,1000);
+    </script>
+<style>
+.title
+{
+	text-align:center;
+	font-size:60px;
+	color:#FC0;	
+	text-shadow:3px 2px 3px #FF6;	
+}
+.btn
+{
+	background:#F90;
+	border:1px solid #FC0;
+}
+.btn:hover
+{
+	background:crimson;
+}
+.col-4
+{
+	height:450px;
+	width:100%;
+	border:1px solid black;
+	background:url(../static/images/adminimage.jpg);
+	background-size:100% 450px;
+}
+.col-8
+{
+	height:450px;
+	width:100%;
+	border:1px solid black;
+	overflow:scroll;
+}
+.foot
+{
+	font-size:30px;
+	color:#FC0;
+	text-align:center;
+	font-weight:100;
+	font-style:oblique;
+}
+.belowf
+{
+	background:#FC3;
+	height:34px;
+}
+#i1
+{
+	height:100%;
+	width:100%;
+}
+#e
+{
+	color:#303;
+	font-size:24px;
+	font-weight:900;
+	font-family:"Arial Black", Gadget, sans-serif;
+	text-decoration:none;
+}
+#e:hover
+{
+	color:orange;
+	text-decoration:underline;
+}
+#bt
+{
+	color:white;
+	text-decoration:none;
+}
+
+</style>
+
+
+</head>
+
+<body>
+<div class="container-fluid bg-dark">
+<div class="title">Admin workarea</div>
+</div>
+<div class="container-fluid bg-warning">
+<div class="row">
+<button class="btn"><a id="bt" href="admin_home">Home</a></button>
+  <button class="btn"><a id="bt" href="admin_reg">New admin</a></button>
+<button class="btn"><a id="bt" href="hospital_form">New hospital</a></button>
+  <button class="btn"><a id="bt" href="show_admins">Admins</a></button>
+<button class="btn"><a id="bt" href="show_hospital">Hospitals</a></button>
+<button class="btn"><a id="bt" href="change_password_admin">Change password</a></button>
+<button class="btn "><a id="bt" href="logout">Logout</a></button>
+<h4 id="clck" style="margin-left:530px;">TIME</h4>
+</div>
+</div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-4"></div>
+<div class="col-8">{% block a1 %} {% endblock %}</div>
+</div>
+</div>
+<div class="belowf container-fluid"></div>
+<div class="foot container-fluid bg-dark">Copyright &copy; to umesh</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>School Management</title>
+<!-- TemplateEndEditable -->
+<link href="file:///G|/web design/Schooltemplate.css" rel="stylesheet" type="text/css">
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+<div id="main">
+<div id="wrapper">
+<div id="header">
+</div><!--end of Header-->
+<div id="menu">
+<ul><li><a href="home2.html">Home</a></li>
+<li><a href="about.html">Services</a></li>
+<li><a href="">Support</a></li>
+<li><a href="">Login</a></li>
+<li><a href="">About</a></li></ul>
+</div><!--end of menu bar-->
+<div id="middle">
+<div id="content1"></div>
+<div id="content2">
+<!-- TemplateBeginEditable name="content2" -->
+
+
+
+
+<!-- TemplateEndEditable -->
+
+</div>
+<div id="content3"></div>
+</div><!--End of middle-->
+<div id="footer"></div><!--end of footer-->
+</div><!--end of Wrapper-->
+</div><!--end of Main-->
+</body>
+</html>

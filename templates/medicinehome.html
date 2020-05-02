@@ -1,0 +1,61 @@
+
+<html>
+<head>
+
+<title>Medicine</title>
+<link rel="stylesheet" type="text/css" href="../static/bootstrap-4.0.0-dist/css/bootstrap.css">
+<style>
+.title
+{
+	background:url(../static/images/medicine.jpg);
+	height:250px;
+}
+.body
+{
+	height:600px;
+	background:rgba(51,204,255,0.1);
+}
+.foot
+{
+	height:80px;
+	color:white;
+	text-align:center;
+	font-size:40px;
+	text-shadow:3px 1px #999;
+	background:rgba(0,153,0,0.9);
+}
+img
+{
+	margin-top:-550px;
+	margin-left:1150px;
+	position:fixed;
+}
+#e
+{
+	color:#303;
+	font-size:24px;
+	font-weight:900;
+	font-family:"Arial Black", Gadget, sans-serif;
+	text-decoration:none;
+
+}
+#e:hover
+{
+	color:skyblue;
+	text-decoration:underline;
+}
+
+
+</style>
+</head>
+
+<body>
+<div class="container-fluid title"></div>
+<div class="col-12 body">
+{% block m1 %}
+{% endblock %}
+</div>
+<img src="../static/images/medicinelogo.png" height="250" width="190">
+<div class="container-fluid foot">copyright &copy; by umesh</div>
+</body>
+</html>

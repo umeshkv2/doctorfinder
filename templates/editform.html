@@ -1,0 +1,21 @@
+{% extends 'admintemplate.html' %}
+{% block a1 %}
+<h2 style="color:rgba(0,0,0,0.7); margin-left:50px;">Edit hospital details</h2>
+<div align="center" style="height=500px; width:400px; background:#ff9933;">
+    {% if edata %}
+<form name="form2" method="post" action="edit_details">
+<p style="font-size:18px">Hospital name<input type="text" name="v1" value="{{edata[0]}}"style="margin-left:60px"></p>
+<p style="font-size:18px">Speciality<input type="text" name="v2" value="{{edata[1]}}" style="margin-left:95px"></p>
+<p style="font-size:18px">Address<input type="text" name="v3" value="{{edata[2]}}" style="margin-left:105px"></p>
+<p style="font-size:18px">Contact<input type="text" name="v4" value="{{edata[3]}}" style="margin-left:107px"></p>
+<p style="font-size:18px">Ac beds<input type="text" name="v5" value="{{edata[4]}}" style="margin-left:105px"></p>
+<p style="font-size:18px">Non-Ac beds<input type="text" name="v6" value="{{edata[5]}}" style="margin-left:65px"></p>
+<p style="font-size:18px">E-mail<input readonly type="text" name="v7" value="{{edata[6]}}" style="margin-left:112px"></p>
+<p><input onMouseOver="this.style.background='lime'"
+onMouseOut="this.style.background='pink'" style="background:pink;cursor:pointer;margin-left:100px;" type="submit" value="submit"></p>
+</form>
+</div>
+{% elif emess %}
+<h4>{{emess}}</h4>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'admintemplate.html' %}
+<html>
+<head>
+<title>Hospital registration</title>
+</head>
+
+<body>
+{% block a1 %}
+<div align="center" style="height=500px; width:400px; background:#ff9933;">
+<form name="form2" method="post" action="hospital_form">
+<p style="font-size:18px">Hospital name<input type="text" name="v1" style="margin-left:60px"></p>
+<p style="font-size:18px">Speciality<input type="text" name="v2" style="margin-left:95px"></p>
+<p style="font-size:18px">Address<input type="text" name="v3" style="margin-left:105px"></p>
+<p style="font-size:18px">Contact<input type="text" name="v4" style="margin-left:107px"></p>
+<p style="font-size:18px">Ac beds<input type="text" name="v5" style="margin-left:105px"></p>
+<p style="font-size:18px">Non-Ac beds<input type="text" name="v6" style="margin-left:65px"></p>
+<p style="font-size:18px">E-mail<input type="text" name="v7" style="margin-left:120px"></p>
+    <p style="font-size:18px">password<input type="password" name="v8" style="margin-left:95px"></p>
+<p><input type="submit"  value="register" onMouseOver="this.style.background='purple'" 
+onMouseOut="this.style.background='lime'" style="margin-left:100px;  background:lime; cursor:pointer;" ></p>
+</form>
+</div>
+{% if hmess %}
+<h4>{{hmess}}</h4>
+{% endif %}
+{% endblock %}
+
+</body>
+</html>

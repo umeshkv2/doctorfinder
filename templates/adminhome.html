@@ -1,0 +1,26 @@
+{% extends 'admintemplate.html' %}
+{% block a1 %}
+	<h1 align="center" style="color:#F60;font-weight:bold; text-shadow:2px 2px orange;"><i>Admin Home</i></h1>
+    <div align="center">
+
+	<h4 style="color:#639; font-weight:700;">Your name:{{name}}<br />Your email:{{eml}}</h4>
+	{% if photo=='not' %}
+	<h4 style="color:red"><a href="upload_admin_photo">upload photo</a></h4>
+	{% else %}
+	<img src="../static/uploadphoto/{{photo}}" width="200" height="200" ><br/>
+	<p><a href="change_admin_photo">change Photo</a></p>
+	{% endif %}
+    </div>
+    <div>
+	<ul style="list-style:circle; list-style-position:inside;" >
+		<li><a id="e" href="edit_form">Edit hospital details</a></li>
+		<li><a id="e" href="hospital_form">New Hospital registration</a></li>
+		<li><a id="e" href="admin_reg">New admin registration</a></li>
+		<li><a id="e" href="show_admins">Show admins</a></li>
+		<li><a id="e" href="show_hospital">Show hospital details</a></li>
+		<li><a id="e" href="admin_profile">Edit admin profile</a> </li>
+		<li><a id="e" href="change_password_admin">Change Password</a></li>
+		<li><a id="e" href="logout">Logout</a></li>
+	</ul>
+    </div>
+	{% endblock %}
